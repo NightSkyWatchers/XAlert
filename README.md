@@ -4,11 +4,11 @@ XAlert
 ![image](https://github.com/StrongX/XAlert/blob/master/10.gif)
 
 ```objc
--install
-1、drag the XAlert to your project
-2、import the XAlert.h
-3、XAlert use the pop,so you must install the pop
-(about pop detail look at ![pop](https://github.com/facebook/pop))
+- install -
+>1、drag the XAlert to your project
+ 2、import the XAlert.h
+ 3、XAlert use the pop,so you must install the pop
+ (about pop detail look at ![pop](https://github.com/facebook/pop))
 
 - (IBAction)actionsheet1:(id)sender {
 XActionSheet *sheet = [[XActionSheet alloc]initWithTitleAndDesc:@"这是一个上啦菜单" Desc:@"你可以在这里填写一些详细内容"];
