@@ -7,8 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "XActionSheet.h"
-#import "XAlertView.h"
+#import "XAlert.h"
 
 
 
