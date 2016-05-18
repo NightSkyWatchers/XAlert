@@ -27,19 +27,19 @@
     _Title = [[UILabel alloc]initWithFrame:CGRectMake(0, 10, width*0.9, 15)];
     _Title.font = [UIFont systemFontOfSize:14];
     [_Title setAdjustsFontSizeToFitWidth:true];
-    _Title.textColor = [UIColor whiteColor];
+    _Title.textColor = titleTextColor;
     _Title.textAlignment = NSTextAlignmentCenter;
     _Title.text = Title;
     
     _Desc = [[UILabel alloc]initWithFrame:CGRectMake(0, 25, width*0.9, 15)];
     [_Desc setAdjustsFontSizeToFitWidth:true];
     _Desc.font = [UIFont systemFontOfSize:12];
-    _Desc.textColor = [UIColor whiteColor];
+    _Desc.textColor = titleTextColor;
     _Desc.textAlignment = NSTextAlignmentCenter;
     _Desc.text = Desc;
     
     titleView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, width * 0.9, 49.5)];
-    titleView.backgroundColor = [UIColor colorWithRed:(CGFloat)52/255 green:(CGFloat)170/255 blue:(CGFloat)135/255 alpha:1];
+    titleView.backgroundColor = greenColor;
     
     //无title 有desc
     if ( (Title == nil || [Title isEqualToString:@""]) && (Desc != nil && ![Desc isEqualToString:@""]) ) {
@@ -142,7 +142,8 @@
     [_CancelButton setTitle:Title forState:normal];
     _CancelButton.layer.cornerRadius = 5;
     _CancelButton.layer.masksToBounds = true;
-    _CancelButton.backgroundColor = [UIColor brownColor];
+    _CancelButton.backgroundColor = brownColor;
+    [_CancelButton setTitleColor:buttonTextColor forState:0];
     [_CancelButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
 }
 /**
@@ -153,8 +154,9 @@
     UIButton *btn = [[UIButton alloc]init];
     btn.tag = _btnArray.count;
     [btn addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-    btn.backgroundColor = [UIColor colorWithRed:(CGFloat)52/255 green:(CGFloat)170/255 blue:(CGFloat)135/255 alpha:1];
+    btn.backgroundColor = greenColor;
     [btn setTitle:Title forState:normal];
+    [btn setTitleColor:buttonTextColor forState:0];
     [_btnArray addObject:btn];
 }
 /**
@@ -223,7 +225,7 @@
    
     [[[UIApplication sharedApplication] keyWindow] addSubview:self];
     layView = [[UIView alloc]initWithFrame:self.frame];
-    layView.backgroundColor = [UIColor grayColor];
+    layView.backgroundColor = layerColor;
     layView.alpha = 0;
     [self addSubview:layView];
     [self addSubview:allBottom];
@@ -240,7 +242,7 @@
     
     [[[UIApplication sharedApplication] keyWindow] addSubview:self];
     layView = [[UIView alloc]initWithFrame:self.frame];
-    layView.backgroundColor = [UIColor grayColor];
+    layView.backgroundColor = layerColor;
     layView.alpha = 0;
     [self addSubview:layView];
     InAnimate = YES;

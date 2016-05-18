@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+
+#define greenColor [UIColor colorWithRed:(CGFloat)52/255 green:(CGFloat)170/255 blue:(CGFloat)135/255 alpha:1]
+#define brownColor [UIColor brownColor]
+#define layerColor [UIColor grayColor]
+#define buttonTextColor  [UIColor whiteColor]
+#define titleTextColor  [UIColor whiteColor]
+
 @class XActionSheet;
 @protocol XActionSheetDelegate <NSObject>
 @optional
