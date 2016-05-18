@@ -4,8 +4,10 @@ XAlert
 ![image](https://github.com/StrongX/XAlert/blob/master/10.gif)
 
 # install
-  1、drag the XAlert to your project
+  1、drag the XAlert to your project 
+  
   2、import the XAlert.h
+  
   3、XAlert use the pop,so you must install the pop
   (about pop detail look at [pop](https://github.com/facebook/pop))
 
