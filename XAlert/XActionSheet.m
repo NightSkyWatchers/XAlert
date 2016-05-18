@@ -223,28 +223,16 @@
     }
     
    
-    [[[UIApplication sharedApplication] keyWindow] addSubview:self];
-    layView = [[UIView alloc]initWithFrame:self.frame];
-    layView.backgroundColor = layerColor;
-    layView.alpha = 0;
-    [self addSubview:layView];
+    [self addTheLayer];
     [self addSubview:allBottom];
-
-    
-    
     
     [UIView animateWithDuration:0.2 animations:^{
         allBottom.frame = CGRectMake(width*0.05, height - bottomHeight, width*0.9, bottomHeight);
-        layView.alpha = 0.2;
     }];
 }
 - (void)showInAnimate{
     
-    [[[UIApplication sharedApplication] keyWindow] addSubview:self];
-    layView = [[UIView alloc]initWithFrame:self.frame];
-    layView.backgroundColor = layerColor;
-    layView.alpha = 0;
-    [self addSubview:layView];
+    [self addTheLayer];
     InAnimate = YES;
     
     NSMutableArray *viewArray = [[NSMutableArray alloc]init];
@@ -333,9 +321,20 @@
        
    }];
     
+    
+    
+}
+-(void)addTheLayer{
+    [[[UIApplication sharedApplication] keyWindow] addSubview:self];
+    layView = [[UIView alloc]initWithFrame:self.frame];
+    layView.backgroundColor = layerColor;
+    layView.alpha = 0;
+    [self addSubview:layView];
     [UIView animateWithDuration:0.2 animations:^{
         layView.alpha = 0.2;
     }];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(close)];
+    [layView addGestureRecognizer:tap];
     
 }
 /**

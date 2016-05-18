@@ -9,7 +9,6 @@
 #import "XAlertView.h"
 #import "POP.h"
 
-#define green_Color [UIColor colorWithRed:102.0/255.0 green:195.0/255.0 blue:165.0/255.0 alpha:1.0f]
 @implementation XAlertView
 {
     CGRect containRect;
